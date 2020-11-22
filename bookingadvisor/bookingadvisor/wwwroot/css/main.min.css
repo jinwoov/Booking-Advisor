@@ -1,1 +1,1 @@
-﻿body{background-color:#000;color:#fff;}
+﻿@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");*,*:before,*:after{box-sizing:border-box;}body header .head{background-color:#000;color:#fff;padding:20px;font-family:'Lobster',cursive;}body header .head h1{font-size:40px;font-weight:bold;text-align:center;}body header .head h2{text-align:right;}body header .head div{text-align:right;}body header .head div button{background-color:#fff;padding:5px 10px;margin:0 5px;border-radius:10%;font-weight:600;}body header .head div button:hover{color:#808080;}

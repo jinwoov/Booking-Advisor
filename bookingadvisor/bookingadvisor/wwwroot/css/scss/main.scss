@@ -1,4 +1,41 @@
-﻿body {
-    background-color: black;
-    color: white;
+﻿@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+$phone-size: 900px;
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
+body {
+    header {
+        .head {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            font-family: 'Lobster', cursive;
+            h1 {
+                font-size: 40px;
+                font-weight: bold;
+                text-align: center;
+            }
+            h2 {
+                text-align: right;
+            }
+            div {
+                text-align: right;
+
+                button {
+                    background-color: white;
+                    padding: 5px 10px;
+                    margin: 0 5px;
+                    border-radius: 10%;
+                    font-weight: 600;
+                }
+                button:hover{
+                    color: grey;
+                }
+            }
+        }
+    }
 }
