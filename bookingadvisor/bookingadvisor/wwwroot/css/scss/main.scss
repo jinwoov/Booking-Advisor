@@ -1,6 +1,7 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
 $phone-size: 900px;
-
+$roboto: 'Roboto', sans-serif;
+$jorange:#febb02;
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -14,15 +15,13 @@ body {
             color: white;
             padding: 20px;
             font-family: 'Lobster', cursive;
-            h1 {
-                font-size: 40px;
-                font-weight: bold;
-                text-align: center;
-            }
+
             h2 {
+                margin-top: 5px;
                 text-align: right;
             }
-            div {
+
+            #authentication {
                 text-align: right;
 
                 button {
@@ -32,9 +31,76 @@ body {
                     border-radius: 10%;
                     font-weight: 600;
                 }
-                button:hover{
+
+                button:hover {
                     color: grey;
                 }
+            }
+
+            #menu-bar {
+                text-align: center;
+                margin: auto;
+                width: 40%;
+
+                h1 {
+                    font-size: 40px;
+                    font-weight: bold;
+                }
+
+                div {
+                    padding-top: 40px;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    a {
+                        font-family: $roboto;
+                        color: white;
+                        text-decoration: none;
+                        opacity: 0.8;
+                    }
+
+                    a:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+
+        form {
+            #user-choice {
+                padding: 5px;
+
+                p {
+                    width: 100%;
+                    padding: 5px;
+                }
+
+                input {
+                    width: 70%;
+                    height: 2rem;
+                    padding: 5px;
+                }
+
+                input:focus {
+                    outline: none !important;
+                    border: 2px solid $jorange;
+                    box-shadow: 0 0 10px #719ECE;
+                    border-radius: 0;
+                }
+            }
+
+            button {
+                font-weight: bolder;
+                background-color: black;
+                color: white;
+                padding: 10px;
+                border-radius: 0;
             }
         }
     }
