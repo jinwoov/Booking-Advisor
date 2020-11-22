@@ -63,3 +63,8 @@ body main {
     color: white;
     padding: 10px;
     border-radius: 0; }
+  body main #table-box {
+    display: flex;
+    flex-wrap: wrap; }
+    body main #table-box div {
+      width: 50%; }

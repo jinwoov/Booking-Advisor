@@ -103,5 +103,12 @@ body {
                 border-radius: 0;
             }
         }
+        #table-box{
+            display: flex;
+            flex-wrap:wrap;
+            div{
+                width: 50%;
+            }
+        }
     }
 }
