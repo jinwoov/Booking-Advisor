@@ -26,7 +26,7 @@ jobs:
       - name: Build and deploy the Docker image
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          APP_NAME: ${{ 'booking-advisor' }
+          APP_NAME: ${{ 'booking-advisor' }}
         run: |
           cd ./bookingadvisor
           docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
