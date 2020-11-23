@@ -5,21 +5,21 @@ using System.Threading.Tasks;
 using bookingadvisor.Models.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using static bookingadvisor.Models.Currency;
 
 namespace bookingadvisor.Pages
 {
     public class IndexModel : PageModel
     {
         private ICurrency _currencyM;
-
+        public Rates rate = new Rates();
         public IndexModel(ICurrency currencyM)
         {
             _currencyM = currencyM;
         }
         public void OnGet()
         {
-            var rates = _currencyM.GetRates();
-            Console.WriteLine(rates);
+            rate = _currencyM.GetRates();
         }
     }
 }
