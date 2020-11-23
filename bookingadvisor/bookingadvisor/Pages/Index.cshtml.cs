@@ -11,6 +11,7 @@ namespace bookingadvisor.Pages
     {
         public void OnGet()
         {
+
         }
     }
 }
