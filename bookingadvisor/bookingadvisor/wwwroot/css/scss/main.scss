@@ -3,7 +3,8 @@ $phone-size: 900px;
 $roboto: 'Roboto', sans-serif;
 $jorange:#febb02;
 $jpurple: #4639cc;
-
+$jblue: #003580;
+$jbanner: #1c1a2f;
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -12,7 +13,7 @@ $jpurple: #4639cc;
 body {
     header {
         .head {
-            background-color: black;
+            background-color: $jbanner;
             color: white;
             padding: 20px;
             font-family: 'Lobster', cursive;
@@ -57,7 +58,7 @@ body {
                         font-family: $roboto;
                         color: white;
                         text-decoration: none;
-                        opacity: 0.8;
+                        opacity: 0.6;
                     }
 
                     a:hover {
@@ -69,7 +70,7 @@ body {
     }
 
     main {
-        background-image: url("../../assets/sky.jpg");
+        background-image: url("../../assets/background.jpg");
         height: 70vh;
         background-attachment: fixed;
         background-position: center;
@@ -102,7 +103,7 @@ body {
                     width: 70%;
                     height: 2.8rem;
                     padding: 5px;
-                    border: 2px solid $jpurple;
+                    border: 2px solid $jbanner;
                 }
 
                 input:focus {
@@ -116,7 +117,7 @@ body {
                     border: none;
                     font-size: 1.2rem;
                     font-weight: bolder;
-                    background-color: $jpurple;
+                    background-color: $jbanner;
                     color: white;
                     padding: 11px;
                     border-radius: 0;
@@ -133,7 +134,7 @@ body {
             width: 80%;
             border-radius: 10px;
             box-shadow: rgba(0,0,0,0.2) 3px 2px 1px 0px;
-
+            padding: 5px;
             div {
                 width: 50%;
             }

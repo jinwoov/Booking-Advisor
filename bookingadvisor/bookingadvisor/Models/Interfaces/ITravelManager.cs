@@ -8,6 +8,6 @@ namespace bookingadvisor.Models.Interfaces
 {
     public interface ITravelManager
     {
-        public Region[] GetInfo();
+        public Task<Travel.Region[]> GetInfo();
     }
 }

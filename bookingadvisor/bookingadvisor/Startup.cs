@@ -28,6 +28,8 @@ namespace bookingadvisor
             services.AddMvc();
 
             services.AddTransient<ICurrency, CurrencyService>();
+            services.AddTransient<ITravelManager, TravelService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

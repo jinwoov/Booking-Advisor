@@ -11,15 +11,19 @@ namespace bookingadvisor.Pages
 {
     public class IndexModel : PageModel
     {
-        private ICurrency _currencyM;
+        private readonly ICurrency _currencyM;
+        private readonly ITravelManager _travelM;
         public Rates rate = new Rates();
-        public IndexModel(ICurrency currencyM)
+        public IndexModel(ICurrency currencyM, ITravelManager travelManager)
         {
             _currencyM = currencyM;
+            _travelM = travelManager;
         }
-        public void OnGet()
+        public async Task OnGet()
         {
             rate = _currencyM.GetRates();
+            var data = await _travelM.GetInfo();
+            Console.Write(data);
         }
     }
 }
