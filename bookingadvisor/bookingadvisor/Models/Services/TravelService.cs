@@ -23,7 +23,6 @@ namespace bookingadvisor.Models.Services
         }
         public async Task<Travel.Region[]> GetInfo()
         {
-            string api_key = _config["amadeus_token"];
             string baseURL = @$"https://test.api.amadeus.com/v1//reference-data/locations/pois?latitude=41.39165&longitude=2.164772";
             var tokens = await GetToken();
             string tokenString = tokens.access_token;
