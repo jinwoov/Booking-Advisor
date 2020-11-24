@@ -40,31 +40,62 @@ body header .head {
         opacity: 1; }
 
 body main {
-  width: 90%;
-  margin: auto;
-  text-align: center; }
+  background-image: url("../assets/sky.jpg");
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  body main #save-money {
+    font-weight: bold;
+    font-size: 20px; }
+  body main #upper-box {
+    width: 90%;
+    margin: auto;
+    padding-top: 40px;
+    text-align: center;
+    font-family: "Roboto", sans-serif; }
+  body main form p {
+    width: 100%;
+    padding: 5px; }
   body main form #user-choice {
     padding: 5px; }
-    body main form #user-choice p {
-      width: 100%;
-      padding: 5px; }
     body main form #user-choice input {
       width: 70%;
-      height: 2rem;
-      padding: 5px; }
+      height: 2.8rem;
+      padding: 5px;
+      border: 2px solid #4639cc; }
     body main form #user-choice input:focus {
       outline: none !important;
-      border: 2px solid #febb02;
+      border: 3px solid #febb02;
       box-shadow: 0 0 10px #719ECE;
       border-radius: 0; }
-  body main form button {
-    font-weight: bolder;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border-radius: 0; }
+    body main form #user-choice button {
+      border: none;
+      font-size: 1.2rem;
+      font-weight: bolder;
+      background-color: #4639cc;
+      color: white;
+      padding: 11px;
+      border-radius: 0; }
   body main #table-box {
+    background-color: white;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 10px; }
     body main #table-box div {
       width: 50%; }
+    body main #table-box #currency-box {
+      border-right: 2px black solid; }
+      body main #table-box #currency-box h2 {
+        font-size: 30px;
+        padding: 10px; }
+        body main #table-box #currency-box h2 small {
+          font-size: 12px; }
+      body main #table-box #currency-box p {
+        padding: 5px; }
+      body main #table-box #currency-box #current-time {
+        font-size: 0.8rem; }

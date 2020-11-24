@@ -15,34 +15,40 @@
                 <button>Login</button>
                 <button>Register</button>
             </div>
-            <h2>Top #21 Booking Site</h2>
+            <h2>Top #22 Booking Site</h2>
             <div id="menu-bar">
                 <h1>Booking Advisor</h1>
                 <div>
-                    <a href="#">Flight</a>
-                    <a href="#">Hotel</a>
+                    <a href="#">Flights</a>
+                    <a href="#">Hotels</a>
                     <a href="#">Packages</a>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <p>Hello world!!</p>
-        <div>
-            <form action="/" method="post">
-                <div id="user-choice">
-                    <p>Save Money Using our Website</p>
-                    <input type="text" placeholder="Where do you want to go?"/>
-                </div>
-                <button>Find Deal</button>
-            </form>
-        </div>
-        <div id="table-box">
+        <div id="upper-box">
+            <p>Hello world!!</p>
             <div>
-                <p>Korea Won: @Model.rate.KRW</p>
+                <form action="/" method="post">
+                    <p id="save-money">Save money using our website</p>
+                    <div id="user-choice">
+                        <input type="text" placeholder="Where do you want to go?" />
+                        <button>Find Deal</button>
+                    </div>
+                </form>
             </div>
-            <div>
-                tabel2
+            <div id="table-box">
+                <div id="currency-box">
+                    <h2>Currency<small> from 1 USD</small></h2>
+                    <p>Korea Won: @Model.rate.KRW</p>
+                    <p>Mexico Peso: @Model.rate.MXN</p>
+                    <p>Canadian Dollar: @Model.rate.CAD</p>
+                    <p id="current-time">As of @DateTime.Now</p>
+                </div>
+                <div>
+                    tabel2
+                </div>
             </div>
         </div>
     </main>

@@ -2,6 +2,7 @@
 $phone-size: 900px;
 $roboto: 'Roboto', sans-serif;
 $jorange:#febb02;
+$jpurple: #4639cc;
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -68,46 +69,93 @@ body {
     }
 
     main {
-        width: 90%;
-        margin: auto;
-        text-align: center;
+        background-image: url("../../assets/sky.jpg");
+        height: 70vh;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        #save-money {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #upper-box {
+            width: 90%;
+            margin: auto;
+            padding-top: 40px;
+            text-align: center;
+            font-family: $roboto;
+        }
 
         form {
+            p {
+                width: 100%;
+                padding: 5px;
+            }
+
             #user-choice {
                 padding: 5px;
 
-                p {
-                    width: 100%;
-                    padding: 5px;
-                }
-
                 input {
                     width: 70%;
-                    height: 2rem;
+                    height: 2.8rem;
                     padding: 5px;
+                    border: 2px solid $jpurple;
                 }
 
                 input:focus {
                     outline: none !important;
-                    border: 2px solid $jorange;
+                    border: 3px solid $jorange;
                     box-shadow: 0 0 10px #719ECE;
                     border-radius: 0;
                 }
-            }
 
-            button {
-                font-weight: bolder;
-                background-color: black;
-                color: white;
-                padding: 10px;
-                border-radius: 0;
+                button {
+                    border: none;
+                    font-size: 1.2rem;
+                    font-weight: bolder;
+                    background-color: $jpurple;
+                    color: white;
+                    padding: 11px;
+                    border-radius: 0;
+                }
             }
         }
-        #table-box{
+
+        #table-box {
+            background-color: white;
             display: flex;
-            flex-wrap:wrap;
-            div{
+            flex-wrap: wrap;
+            margin: auto;
+            margin-top: 20px;
+            width: 80%;
+            border-radius: 10px;
+
+            div {
                 width: 50%;
+            }
+
+            #currency-box {
+                border-right: 2px black solid;
+
+                h2 {
+                    font-size: 30px;
+                    padding: 10px;
+
+                    small {
+                        font-size: 12px;
+                    }
+                }
+
+                p {
+                    padding: 5px;
+                }
+
+                #current-time {
+                    font-size: 0.8rem;
+                }
             }
         }
     }
