@@ -28,7 +28,6 @@
     </header>
     <main>
         <div id="upper-box">
-            <p>Hello world!!</p>
             <div>
                 <form action="/" method="post">
                     <p id="save-money">Save money using our website</p>
@@ -42,8 +41,12 @@
                 <div id="currency-box">
                     <h2>Currency<small> from 1 USD</small></h2>
                     <p>Korea Won: @Model.rate.KRW</p>
+                    <p>Euro: @Model.rate.EUR</p>
                     <p>Mexico Peso: @Model.rate.MXN</p>
                     <p>Canadian Dollar: @Model.rate.CAD</p>
+                    <p>British Pound: @Model.rate.GBP</p>
+                    <p>India Rupee: @Model.rate.INR</p>
+
                     <p id="current-time">As of @DateTime.Now</p>
                 </div>
                 <div>
