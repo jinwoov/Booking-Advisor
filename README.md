@@ -21,12 +21,17 @@ A website created to display modern web application vulnerabilities.
 - Docker
 - CI/CD pipeline using Github Action
 - Sass
+- Web API
 - JavaScript
 - Heroku
 
 ## Change Log
 
+- v0.2:
+    - Integrated web currency API.
+    - Integrated web tourist API, still working process.
+    - Fixed Scss.
 - v0.1:
-    - Initial CI pipeline created and test passed
-    - Dockerfile created to contain application
+    - Initial CI pipeline created and test passed.
+    - Dockerfile created to contain application.
     - Initial scaffolding of index page created.
