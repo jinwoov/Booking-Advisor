@@ -40,17 +40,23 @@
             <div id="table-box">
                 <div id="currency-box">
                     <h2>Currency<small> Based on 1 USD</small></h2>
-                    <p>Korea Won: @Model.rate.KRW</p>
-                    <p>Euro: @Model.rate.EUR</p>
-                    <p>Mexico Peso: @Model.rate.MXN</p>
-                    <p>Canadian Dollar: @Model.rate.CAD</p>
-                    <p>British Pound: @Model.rate.GBP</p>
-                    <p>India Rupee: @Model.rate.INR</p>
+                    <p>Korea Won: @Model.Rate.KRW</p>
+                    <p>Euro: @Model.Rate.EUR</p>
+                    <p>Mexico Peso: @Model.Rate.MXN</p>
+                    <p>Canadian Dollar: @Model.Rate.CAD</p>
+                    <p>British Pound: @Model.Rate.GBP</p>
+                    <p>India Rupee: @Model.Rate.INR</p>
 
                     <p id="current-time">As of @DateTime.Now</p>
                 </div>
-                <div>
-                    tabel2
+                <div id="place-to-go">
+                    <h2>Check these place out!</h2>
+                    @for (int i = 0; i < 5; i++)
+                    {
+                        <p>Put image here for my sanity :(</p>
+                        <p>@Model.Data[i].name</p>
+                        <p>@Model.Data[i].category.ToLower()</p>
+                    }
                 </div>
             </div>
         </div>

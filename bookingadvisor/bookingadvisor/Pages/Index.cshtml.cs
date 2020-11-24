@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using bookingadvisor.Models;
 using bookingadvisor.Models.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -13,7 +14,8 @@ namespace bookingadvisor.Pages
     {
         private readonly ICurrency _currencyM;
         private readonly ITravelManager _travelM;
-        public Rates rate = new Rates();
+        public Rates Rate = new Rates();
+        public List<Travel.Region> Data = new List<Travel.Region>();
         public IndexModel(ICurrency currencyM, ITravelManager travelManager)
         {
             _currencyM = currencyM;
@@ -21,9 +23,8 @@ namespace bookingadvisor.Pages
         }
         public async Task OnGet()
         {
-            rate = _currencyM.GetRates();
-            var data = await _travelM.GetInfo();
-            Console.Write(data);
+            Rate = _currencyM.GetRates();
+            Data = await _travelM.GetInfo();
         }
     }
 }

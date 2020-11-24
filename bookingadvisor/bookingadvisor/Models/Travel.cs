@@ -10,7 +10,7 @@ namespace bookingadvisor.Models
 
         public class TravelInfo
         {
-            public Region[] data { get; set; }
+            public List<Region> data { get; set; }
         }
 
         public class Region

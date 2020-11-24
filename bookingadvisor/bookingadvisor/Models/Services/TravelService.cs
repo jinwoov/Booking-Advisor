@@ -21,7 +21,7 @@ namespace bookingadvisor.Models.Services
             _config = configuration;
 
         }
-        public async Task<Travel.Region[]> GetInfo()
+        public async Task<List<Travel.Region>> GetInfo()
         {
             string baseURL = @$"https://test.api.amadeus.com/v1//reference-data/locations/pois?latitude=41.39165&longitude=2.164772";
             var tokens = await GetToken();
@@ -34,7 +34,7 @@ namespace bookingadvisor.Models.Services
 
             var travel_info = JsonSerializer.Deserialize<TravelInfo>(stringData);
 
-            return travel_info.data.ToArray();
+            return travel_info.data.ToList();
         }
 
         private async Task<Token> GetToken()

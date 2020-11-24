@@ -71,7 +71,7 @@ body {
 
     main {
         background-image: url("../../assets/background.jpg");
-        height: 70vh;
+        height: 90vh;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -137,6 +137,12 @@ body {
             padding: 5px;
             div {
                 width: 50%;
+            }
+
+            #place-to-go{
+                p{
+                    padding: 5px 0;
+                }
             }
 
             #currency-box {
