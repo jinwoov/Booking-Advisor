@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static bookingadvisor.Models.Unsplash;
 
 namespace bookingadvisor.Models.Interfaces
 {
     public interface IUnsplashManager
     {
-        public Task<string> GetPic(string keyword);
+        public Task<List<Results>> GetPic(string keyword);
     }
 }

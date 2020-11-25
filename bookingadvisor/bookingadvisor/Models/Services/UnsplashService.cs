@@ -21,7 +21,7 @@ namespace bookingadvisor.Models.Services
         {
             _config = configuration;
         }
-        public async Task<string> GetPic(string keyword)
+        public async Task<List<Results>> GetPic(string keyword)
         {
             string api = _config["unsplash-api"];
             var baseURL = @$"https://api.unsplash.com/search/photos?client_id={api}&query={keyword}";
@@ -33,8 +33,8 @@ namespace bookingadvisor.Models.Services
             string stringData = response.Content.ReadAsStringAsync().Result;
 
             var getRate = JsonSerializer.Deserialize<UnsplashPicture>(stringData);
-            string picture = getRate.results[0].urls.regular;
-            return picture;
+
+            return getRate.results;
         }
     }
 }
