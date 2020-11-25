@@ -7,6 +7,6 @@ namespace bookingadvisor.Models.Interfaces
 {
     public interface IUnsplashManager
     {
-        public string GetPic(string keyword);
+        public Task<string> GetPic(string keyword);
     }
 }

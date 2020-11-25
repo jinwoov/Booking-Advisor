@@ -33,12 +33,12 @@ namespace bookingadvisor.Pages
             _travelM = travelManager;
             _uManager = uManger;
         }
-        public void OnGet()
+        public async Task OnGet()
         {
             Random r = new Random();
             int rV = r.Next(0, TourPlace.Count);
             string pickedLocation = TourPlace[rV];
-            string result = _uManager.GetPic(pickedLocation);
+            string result = await _uManager.GetPic(pickedLocation);
             TempData["Location"] = pickedLocation;
             TempData["imgURL"] = result;
         }

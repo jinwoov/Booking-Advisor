@@ -21,7 +21,7 @@ namespace bookingadvisor.Models.Services
         {
             _config = configuration;
         }
-        public string GetPic(string keyword)
+        public async Task<string> GetPic(string keyword)
         {
             string api = _config["unsplash-api"];
             var baseURL = @$"https://api.unsplash.com/search/photos?client_id={api}&query={keyword}";
