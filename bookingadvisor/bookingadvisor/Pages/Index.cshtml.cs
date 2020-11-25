@@ -26,8 +26,9 @@ namespace bookingadvisor.Pages
         public void OnGet()
         {
             var result = _uManager.GetPic();
+            string url = result.results[0].urls.regular;
             TempData["Location"] = result.Location;
-            TempData["imgURL"] = result.results[0].urls.regular;
+            TempData["imgURL"] = url;
         }
     }
 }

@@ -38,7 +38,7 @@ namespace bookingadvisor.Models.Services
             string pickedLocation = TourPlace[rV];
 
             string api = _config["unsplash-api"];
-            var baseURL = @$"https://api.unsplash.com/search/photos?client_id={api}&query={pickedLocation}";
+            var baseURL = @$"https://api.unsplash.com/search/photos?client_id={api}&query=korea";
             client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
