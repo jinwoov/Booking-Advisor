@@ -17,16 +17,6 @@ namespace bookingadvisor.Pages
         private readonly IUnsplashManager _uManager;
         public Rates Rate = new Rates();
         public List<Travel.Region> Data = new List<Travel.Region>();
-        public List<string> TourPlace = new List<string>()
-        {
-            "Korea",
-            "Germany",
-            "England",
-            "Japan",
-            "New York",
-            "India",
-            "Jordan"
-        };
         public IndexModel(ICurrency currencyM, ITravelManager travelManager, IUnsplashManager uManger)
         {
             _currencyM = currencyM;
@@ -35,6 +25,16 @@ namespace bookingadvisor.Pages
         }
         public async Task OnGet()
         {
+            List<string> TourPlace = new List<string>()
+            {
+                "Korea",
+                "Germany",
+                "England",
+                "Japan",
+                "New York",
+                "India",
+                "Jordan"
+            };
             Random r = new Random();
             int rV = r.Next(0, TourPlace.Count);
             string pickedLocation = TourPlace[rV];
