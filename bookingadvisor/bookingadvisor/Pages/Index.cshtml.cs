@@ -25,7 +25,7 @@ namespace bookingadvisor.Pages
         }
         public void OnGet()
         {
-            Unsplash = _uManager.GetPic();
+            //Unsplash = _uManager.GetPic();
         }
     }
 }
