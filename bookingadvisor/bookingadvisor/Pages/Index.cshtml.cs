@@ -23,7 +23,7 @@ namespace bookingadvisor.Pages
             _travelM = travelManager;
             _uManager = uManger;
         }
-        public async Task OnGet()
+        public void OnGet()
         {
             List<string> TourPlace = new List<string>()
             {
@@ -38,7 +38,7 @@ namespace bookingadvisor.Pages
             Random r = new Random();
             int rV = r.Next(0, TourPlace.Count);
             string pickedLocation = TourPlace[rV];
-            var result = await _uManager.GetPic(pickedLocation);
+            var result = _uManager.GetPic(pickedLocation);
             int ind = r.Next(0, result.Count);
             TempData["Location"] = pickedLocation;
             TempData["imgURL"] = result[ind].urls.regular;

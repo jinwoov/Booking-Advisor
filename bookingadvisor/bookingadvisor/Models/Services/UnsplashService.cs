@@ -21,7 +21,7 @@ namespace bookingadvisor.Models.Services
         {
             _config = configuration;
         }
-        public async Task<List<Results>> GetPic(string keyword)
+        public List<Results> GetPic(string keyword)
         {
             string api = _config["unsplash-api"];
             var baseURL = @$"https://api.unsplash.com/search/photos?client_id={api}&query={keyword}";
@@ -29,8 +29,8 @@ namespace bookingadvisor.Models.Services
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
 
-            var response = await client.GetAsync(baseURL);
-            string stringData = await response.Content.ReadAsStringAsync();
+            HttpResponseMessage response = client.GetAsync(baseURL).Result;
+            string stringData = response.Content.ReadAsStringAsync().Result;
 
             var getRate = JsonSerializer.Deserialize<UnsplashPicture>(stringData);
 
