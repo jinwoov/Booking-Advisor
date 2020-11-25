@@ -25,23 +25,9 @@ namespace bookingadvisor.Pages
         }
         public void OnGet()
         {
-            List<string> TourPlace = new List<string>()
-            {
-                "Korea",
-                "Germany",
-                "England",
-                "Japan",
-                "New York",
-                "India",
-                "Jordan"
-            };
-            Random r = new Random();
-            int rV = r.Next(0, TourPlace.Count);
-            string pickedLocation = TourPlace[rV];
-            var result = _uManager.GetPic(pickedLocation);
-            int ind = r.Next(0, result.Count);
-            TempData["Location"] = pickedLocation;
-            TempData["imgURL"] = result[ind].urls.regular;
+            var result = _uManager.GetPic();
+            TempData["Location"] = result.Location;
+            TempData["imgURL"] = result.results[0].urls.regular;
         }
     }
 }

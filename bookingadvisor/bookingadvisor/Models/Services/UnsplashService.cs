@@ -21,20 +21,33 @@ namespace bookingadvisor.Models.Services
         {
             _config = configuration;
         }
-        public List<Results> GetPic(string keyword)
+        public UnsplashPicture GetPic()
         {
+            List<string> TourPlace = new List<string>()
+            {
+                "Korea",
+                "Germany",
+                "England",
+                "Japan",
+                "New York",
+                "India",
+                "Jordan"
+            };
+            Random r = new Random();
+            int rV = r.Next(0, TourPlace.Count);
+            string pickedLocation = TourPlace[rV];
+
             string api = _config["unsplash-api"];
-            var baseURL = @$"https://api.unsplash.com/search/photos?client_id={api}&query={keyword}";
+            var baseURL = @$"https://api.unsplash.com/search/photos?client_id={api}&query={pickedLocation}";
             client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
 
             HttpResponseMessage response = client.GetAsync(baseURL).Result;
             string stringData = response.Content.ReadAsStringAsync().Result;
 
             var getRate = JsonSerializer.Deserialize<UnsplashPicture>(stringData);
-
-            return getRate.results.ToList();
+            getRate.Location = pickedLocation;
+            return getRate;
         }
     }
 }

@@ -10,6 +10,7 @@ namespace bookingadvisor.Models
         public class UnsplashPicture
         {
             public List<Results> results { get; set; }
+            public string Location { get; set; }
         }
         public class Results
         {
