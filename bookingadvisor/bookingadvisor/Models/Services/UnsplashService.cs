@@ -33,9 +33,7 @@ namespace bookingadvisor.Models.Services
             string stringData = response.Content.ReadAsStringAsync().Result;
 
             var getRate = JsonSerializer.Deserialize<UnsplashPicture>(stringData);
-            Random r = new Random();
-            int ind= r.Next(0, getRate.results.Count);
-            string picture = getRate.results[ind].urls.regular;
+            string picture = getRate.results[0].urls.regular;
             return picture;
         }
     }
