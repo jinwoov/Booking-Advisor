@@ -39,8 +39,6 @@ namespace bookingadvisor.Models.Services
 
             string api = _config["unsplash-api"];
             var baseURL = @$"https://api.unsplash.com/search/photos?client_id={api}&query=korea";
-            client.DefaultRequestHeaders.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             HttpResponseMessage response = client.GetAsync(baseURL).Result;
             string stringData = response.Content.ReadAsStringAsync().Result;
