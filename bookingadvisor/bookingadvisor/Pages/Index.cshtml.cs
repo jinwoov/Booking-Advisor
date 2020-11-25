@@ -7,6 +7,7 @@ using bookingadvisor.Models.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using static bookingadvisor.Models.Currency;
+using static bookingadvisor.Models.Unsplash;
 
 namespace bookingadvisor.Pages
 {
@@ -15,8 +16,7 @@ namespace bookingadvisor.Pages
         private readonly ICurrency _currencyM;
         private readonly ITravelManager _travelM;
         private readonly IUnsplashManager _uManager;
-        public Rates Rate = new Rates();
-        public List<Travel.Region> Data = new List<Travel.Region>();
+        public UnsplashPicture Unsplash = new UnsplashPicture();
         public IndexModel(ICurrency currencyM, ITravelManager travelManager, IUnsplashManager uManger)
         {
             _currencyM = currencyM;
@@ -25,10 +25,7 @@ namespace bookingadvisor.Pages
         }
         public void OnGet()
         {
-            var result = _uManager.GetPic();
-            string url = result.results[0].urls.regular;
-            TempData["Location"] = result.Location;
-            TempData["imgURL"] = url;
+            Unsplash = _uManager.GetPic();
         }
     }
 }

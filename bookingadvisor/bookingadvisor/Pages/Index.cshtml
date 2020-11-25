@@ -2,8 +2,6 @@
 @model bookingadvisor.Pages.IndexModel
 @{
     Layout = "_Layout";
-    string locationName = (string)TempData["Location"];
-    string imgURL = (string)TempData["imgURL"];
 }
 
 <!DOCTYPE html>
@@ -40,9 +38,9 @@
             </div>
             <div id="table-box">
                 <div class="tour-place">
-                    <img src="@imgURL" />
+                    <img src="@Model.Unsplash.results[0].urls.regular" />
                     <div class="tour-content">
-                        <h1 class="tour-title">@locationName</h1>
+                        <h1 class="tour-title">@Model.Unsplash.Location</h1>
                         <p class="tour-desc">Korea is so beautiful</p>
                     </div>
                 </div>
