@@ -30,11 +30,11 @@ namespace bookingadvisor.Models.Services
 
 
             var response = await client.GetAsync(baseURL);
-            string stringData = response.Content.ReadAsStringAsync().Result;
+            string stringData = await response.Content.ReadAsStringAsync();
 
             var getRate = JsonSerializer.Deserialize<UnsplashPicture>(stringData);
 
-            return getRate.results;
+            return getRate.results.ToList();
         }
     }
 }
