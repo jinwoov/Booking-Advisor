@@ -29,6 +29,7 @@ namespace bookingadvisor
 
             services.AddTransient<ICurrency, CurrencyService>();
             services.AddTransient<ITravelManager, TravelService>();
+            services.AddTransient<IUnsplashManager, UnsplashService>();
 
         }
 

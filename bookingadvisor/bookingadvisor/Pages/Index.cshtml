@@ -2,6 +2,8 @@
 @model bookingadvisor.Pages.IndexModel
 @{
     Layout = "_Layout";
+    string locationName = (string)TempData["Location"];
+    string imgURL = (string)TempData["imgURL"];
 }
 
 <!DOCTYPE html>
@@ -19,44 +21,30 @@
             <div id="menu-bar">
                 <h1>Booking Advisor</h1>
                 <div>
-                    <a href="#">Flights</a>
-                    <a href="#">Hotels</a>
-                    <a href="#">Packages</a>
+                    <a href="#">Home</a>
+                    <a href="#">Vulnerability</a>
+                    <a href="#">Inn Keeper</a>
                 </div>
             </div>
         </div>
     </header>
     <main>
         <div id="upper-box">
-            <div>
-                <form action="/" method="post">
-                    <p id="save-money">Save money using our website</p>
-                    <div id="user-choice">
-                        <input type="text" placeholder="Where do you want to go?" />
-                        <button>Find Deal</button>
-                    </div>
-                </form>
+            <div class="form-box">
+                <p id="save-money">Save money using our website</p>
+                <div id="user-choice">
+                    <input type="text" placeholder="Where do you want to go?" />
+                    <button id="find-deal">Find Deal</button>
+                    <p id="output-deal"></p>
+                </div>
             </div>
             <div id="table-box">
-                <div id="currency-box">
-                    <h2>Currency<small> Based on 1 USD</small></h2>
-                    <p>Korea Won: @Model.Rate.KRW</p>
-                    <p>Euro: @Model.Rate.EUR</p>
-                    <p>Mexico Peso: @Model.Rate.MXN</p>
-                    <p>Canadian Dollar: @Model.Rate.CAD</p>
-                    <p>British Pound: @Model.Rate.GBP</p>
-                    <p>India Rupee: @Model.Rate.INR</p>
-
-                    <p id="current-time">As of @DateTime.Now</p>
-                </div>
-                <div id="place-to-go">
-                    <h2>Check these place out!</h2>
-                    @for (int i = 0; i < 5; i++)
-                    {
-                        <p>Put image here for my sanity :(</p>
-                        <p>@Model.Data[i].name</p>
-                        <p>@Model.Data[i].category.ToLower()</p>
-                    }
+                <div class="tour-place">
+                    <img src="@imgURL" />
+                    <div class="tour-content">
+                        <h1 class="tour-title">@locationName</h1>
+                        <p class="tour-desc">Korea is so beautiful</p>
+                    </div>
                 </div>
             </div>
         </div>

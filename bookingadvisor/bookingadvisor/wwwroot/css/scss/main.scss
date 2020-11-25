@@ -90,7 +90,7 @@ body {
             font-family: $roboto;
         }
 
-        form {
+        .form-box {
             p {
                 width: 100%;
                 padding: 5px;
@@ -135,34 +135,30 @@ body {
             border-radius: 10px;
             box-shadow: rgba(0,0,0,0.2) 3px 2px 1px 0px;
             padding: 5px;
-            div {
-                width: 50%;
-            }
+            text-align: left;
 
-            #place-to-go{
-                p{
-                    padding: 5px 0;
+            .tour-place {
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+
+                img {
+                    width: 40%;
                 }
-            }
 
-            #currency-box {
-                border-right: 1px black solid;
+                .tour-content {
+                    padding: 1%;
+                    padding-left: 15px;
+                    width: 60%;
 
-                h2 {
-                    font-size: 30px;
-                    padding: 10px;
-
-                    small {
-                        font-size: 12px;
+                    h1 {
+                        text-align: center;
+                        font-size: 2rem;
                     }
-                }
 
-                p {
-                    padding: 5px;
-                }
-
-                #current-time {
-                    font-size: 0.8rem;
+                    .tour-desc{
+                        padding: 5%;
+                    }
                 }
             }
         }

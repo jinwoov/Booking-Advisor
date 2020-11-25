@@ -55,5 +55,6 @@ namespace bookingadvisor.Models.Services
 
             return travel_info;
         }
+
     }
 }

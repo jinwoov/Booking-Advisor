@@ -55,22 +55,22 @@ body main {
     padding-top: 40px;
     text-align: center;
     font-family: "Roboto", sans-serif; }
-  body main form p {
+  body main .form-box p {
     width: 100%;
     padding: 5px; }
-  body main form #user-choice {
+  body main .form-box #user-choice {
     padding: 5px; }
-    body main form #user-choice input {
+    body main .form-box #user-choice input {
       width: 70%;
       height: 2.8rem;
       padding: 5px;
       border: 2px solid #1c1a2f; }
-    body main form #user-choice input:focus {
+    body main .form-box #user-choice input:focus {
       outline: none !important;
       border: 3px solid #febb02;
       box-shadow: 0 0 10px #719ECE;
       border-radius: 0; }
-    body main form #user-choice button {
+    body main .form-box #user-choice button {
       border: none;
       font-size: 1.2rem;
       font-weight: bolder;
@@ -87,19 +87,20 @@ body main {
     width: 80%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.2) 3px 2px 1px 0px;
-    padding: 5px; }
-    body main #table-box div {
-      width: 50%; }
-    body main #table-box #place-to-go p {
-      padding: 5px 0; }
-    body main #table-box #currency-box {
-      border-right: 1px black solid; }
-      body main #table-box #currency-box h2 {
-        font-size: 30px;
-        padding: 10px; }
-        body main #table-box #currency-box h2 small {
-          font-size: 12px; }
-      body main #table-box #currency-box p {
-        padding: 5px; }
-      body main #table-box #currency-box #current-time {
-        font-size: 0.8rem; }
+    padding: 5px;
+    text-align: left; }
+    body main #table-box .tour-place {
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap; }
+      body main #table-box .tour-place img {
+        width: 40%; }
+      body main #table-box .tour-place .tour-content {
+        padding: 1%;
+        padding-left: 15px;
+        width: 60%; }
+        body main #table-box .tour-place .tour-content h1 {
+          text-align: center;
+          font-size: 2rem; }
+        body main #table-box .tour-place .tour-content .tour-desc {
+          padding: 5%; }
