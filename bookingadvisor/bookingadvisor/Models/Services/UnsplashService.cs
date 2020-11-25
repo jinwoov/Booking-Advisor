@@ -29,7 +29,7 @@ namespace bookingadvisor.Models.Services
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
 
-            HttpResponseMessage response = client.GetAsync(baseURL).Result;
+            var response = await client.GetAsync(baseURL);
             string stringData = response.Content.ReadAsStringAsync().Result;
 
             var getRate = JsonSerializer.Deserialize<UnsplashPicture>(stringData);
