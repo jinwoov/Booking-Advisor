@@ -13,18 +13,8 @@ namespace bookingadvisor.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ICurrency _currencyM;
-        private readonly ITravelManager _travelM;
-        private readonly IUnsplashManager _uManager;
-        public List<Results> Unsplash = new List<Results>();
         public string PickPlace { get; set; }
-        public IndexModel(ICurrency currencyM, ITravelManager travelManager, IUnsplashManager uManger)
-        {
-            _currencyM = currencyM;
-            _travelM = travelManager;
-            _uManager = uManger;
-        }
-        public async Task OnGet()
+        public void OnGet()
         {
             List<string> TourPlace = new List<string>()
             {
@@ -37,10 +27,9 @@ namespace bookingadvisor.Pages
                 "Jordan"
             };
             Random r = new Random();
-            int rV = r.Next(0, TourPlace.Count - 1);
-            string pickedLocation = TourPlace[rV];
-            Unsplash = await _uManager.GetPic(pickedLocation);
-            PickPlace = pickedLocation;
+            int rN = r.Next(0, TourPlace.Count -1);
+            PickPlace = TourPlace[rN];
+
         }
     }
 }
