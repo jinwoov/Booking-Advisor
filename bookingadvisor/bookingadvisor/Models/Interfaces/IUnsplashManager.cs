@@ -8,6 +8,6 @@ namespace bookingadvisor.Models.Interfaces
 {
     public interface IUnsplashManager
     {
-        public UnsplashPicture GetPic();
+        public List<Results> GetPic(string pp);
     }
 }

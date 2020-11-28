@@ -16,7 +16,8 @@ namespace bookingadvisor.Pages
         private readonly ICurrency _currencyM;
         private readonly ITravelManager _travelM;
         private readonly IUnsplashManager _uManager;
-        public UnsplashPicture Unsplash = new UnsplashPicture();
+        public List<Results> Unsplash = new List<Results>();
+        public string PickPlace { get; set; }
         public IndexModel(ICurrency currencyM, ITravelManager travelManager, IUnsplashManager uManger)
         {
             _currencyM = currencyM;
@@ -25,7 +26,21 @@ namespace bookingadvisor.Pages
         }
         public void OnGet()
         {
-            //Unsplash = _uManager.GetPic();
+            List<string> TourPlace = new List<string>()
+            {
+                "Korea",
+                "Germany",
+                "England",
+                "Japan",
+                "New York",
+                "India",
+                "Jordan"
+            };
+            Random r = new Random();
+            int rV = r.Next(0, TourPlace.Count - 1);
+            string pickedLocation = TourPlace[rV];
+            Unsplash = _uManager.GetPic(pickedLocation);
+            PickPlace = pickedLocation;
         }
     }
 }
