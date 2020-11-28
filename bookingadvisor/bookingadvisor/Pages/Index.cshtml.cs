@@ -24,7 +24,7 @@ namespace bookingadvisor.Pages
             _travelM = travelManager;
             _uManager = uManger;
         }
-        public void OnGet()
+        public async Task OnGet()
         {
             List<string> TourPlace = new List<string>()
             {
@@ -39,7 +39,7 @@ namespace bookingadvisor.Pages
             Random r = new Random();
             int rV = r.Next(0, TourPlace.Count - 1);
             string pickedLocation = TourPlace[rV];
-            Unsplash = _uManager.GetPic(pickedLocation);
+            Unsplash = await _uManager.GetPic(pickedLocation);
             PickPlace = pickedLocation;
         }
     }
