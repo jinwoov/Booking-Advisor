@@ -40,10 +40,14 @@ function createDictionary() {
 
 function appendInfo() {
     const location = $(".tour-title").text();
-    console.log("hit")
     $(".tour-desc").text(dictionary[location]);   
 }
 
 //While only 60 years ago South Korea was considered a developing country, it’s now one of Asia’s economic and cultural leaders. Super-chic Seoul combines modernism with ancient history; coastal Busan serves up rugged beach spots; and Jeju Island wows with volcanic landscapes and towering mountains.
 let dictionary = createDictionary();
 $("document").ready(appendInfo);
+
+
+$("#find-deal").click(() => {
+    $(".tour-place").empty();
+})

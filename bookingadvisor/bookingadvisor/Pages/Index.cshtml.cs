@@ -27,7 +27,7 @@ namespace bookingadvisor.Pages
                 "Philippines"
             };
             Random r = new Random();
-            int rN = r.Next(0, TourPlace.Count -1);
+            int rN = r.Next(0, TourPlace.Count);
             PickPlace = TourPlace[rN];
         }
     }
