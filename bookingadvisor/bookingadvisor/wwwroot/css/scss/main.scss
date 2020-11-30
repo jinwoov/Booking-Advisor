@@ -1,6 +1,7 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
 $phone-size: 900px;
 $roboto: 'Roboto', sans-serif;
+$main-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 $jorange:#febb02;
 $jpurple: #4639cc;
 $jblue: #003580;
@@ -20,6 +21,7 @@ body {
 
             h2 {
                 margin-top: 5px;
+                font-family: $main-font;
                 text-align: right;
             }
 
@@ -45,8 +47,9 @@ body {
                 width: 40%;
 
                 h1 {
-                    font-size: 40px;
+                    font-size: 2.5rem;
                     font-weight: bold;
+                    font-family: $main-font;
                 }
 
                 div {
@@ -79,6 +82,7 @@ body {
 
         #save-money {
             font-weight: bold;
+            font-family: $main-font;
             font-size: 20px;
         }
 
@@ -141,6 +145,7 @@ body {
                 padding: 20px;
                 display: flex;
                 flex-wrap: wrap;
+
                 img {
                     width: 22%;
                 }

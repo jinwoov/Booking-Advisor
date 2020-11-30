@@ -9,6 +9,7 @@ body header .head {
   font-family: 'Lobster', cursive; }
   body header .head h2 {
     margin-top: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     text-align: right; }
   body header .head #authentication {
     text-align: right; }
@@ -25,8 +26,9 @@ body header .head {
     margin: auto;
     width: 40%; }
     body header .head #menu-bar h1 {
-      font-size: 40px;
-      font-weight: bold; }
+      font-size: 2.5rem;
+      font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
     body header .head #menu-bar div {
       padding-top: 40px;
       display: flex;
@@ -48,6 +50,7 @@ body main {
   background-size: cover; }
   body main #save-money {
     font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 20px; }
   body main #upper-box {
     width: 90%;
