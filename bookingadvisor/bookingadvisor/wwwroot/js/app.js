@@ -1,4 +1,7 @@
 ﻿'use strict';
+
+const hotelList = ["Place", "House", "Hotel", "Inn", "Hostel"];
+
 console.log(`%c
          __    To Mochi the best dog!
         /  \\
@@ -38,16 +41,38 @@ function createDictionary() {
     return dict;
 }
 
-function appendInfo() {
+const appendInfo = () => {
     const location = $(".tour-title").text();
     $(".tour-desc").text(dictionary[location]);   
 }
 
-//While only 60 years ago South Korea was considered a developing country, it’s now one of Asia’s economic and cultural leaders. Super-chic Seoul combines modernism with ancient history; coastal Busan serves up rugged beach spots; and Jeju Island wows with volcanic landscapes and towering mountains.
+const searchFunc = () => {
+    let searchLocation = $("#search-box").val();
+    let firstL = searchLocation[0].toUpperCase();
+    let restW = searchLocation.substr(1);
+    searchLocation = firstL + restW;
+
+    $("main").css("height", "100%");
+
+    $("#table-box").empty();
+    for (let i = 0; i < hotelList.length; i++) {
+        $("#table-box").append(`<div class='hotel' id='hotel${i}'></div>`);
+        $(`#hotel${i}`).append("<img src='/assets/hotel.png' />");
+        $(`#hotel${i}`).append(`<div class='tour-content' id='tour-content${i}'></div>`);
+        $(`#tour-content${i}`).append(`<h1 class='tour-title'>${searchLocation} ${hotelList[i]}</h1>`)
+    }
+}
+
+$("#find-deal").click(searchFunc);
+
+$("#search-box").keypress(function (event) {
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if (keycode == '13') {
+        searchFunc();
+    }
+})
+
+// Main
 let dictionary = createDictionary();
 $("document").ready(appendInfo);
 
-
-$("#find-deal").click(() => {
-    $(".tour-place").empty();
-})

@@ -89,6 +89,24 @@ body main {
     box-shadow: rgba(0, 0, 0, 0.2) 3px 2px 1px 0px;
     padding: 5px;
     text-align: left; }
+    body main #table-box .hotel {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap; }
+      body main #table-box .hotel img {
+        width: 22%; }
+      body main #table-box .hotel .tour-content {
+        padding: 1%;
+        padding-left: 15px;
+        width: 60%;
+        font-family: Georgia, 'Times New Roman', Times, serif; }
+        body main #table-box .hotel .tour-content h1 {
+          text-align: center;
+          font-size: 2rem; }
+        body main #table-box .hotel .tour-content p {
+          line-height: 1.5; }
+        body main #table-box .hotel .tour-content .tour-desc {
+          padding: 5%; }
     body main #table-box .tour-place {
       padding: 10px;
       display: flex;
