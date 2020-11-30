@@ -7,12 +7,11 @@ using bookingadvisor.Models.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using static bookingadvisor.Models.Currency;
-using static bookingadvisor.Models.Unsplash;
 
 namespace bookingadvisor.Pages
 {
     public class IndexModel : PageModel
-    {
+    {        
         public string PickPlace { get; set; }
         public void OnGet()
         {
@@ -24,12 +23,12 @@ namespace bookingadvisor.Pages
                 "Japan",
                 "New York",
                 "India",
-                "Jordan"
+                "Jordan",
+                "Philippines"
             };
             Random r = new Random();
             int rN = r.Next(0, TourPlace.Count -1);
             PickPlace = TourPlace[rN];
-
         }
     }
 }

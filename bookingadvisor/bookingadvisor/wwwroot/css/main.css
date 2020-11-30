@@ -98,9 +98,12 @@ body main {
       body main #table-box .tour-place .tour-content {
         padding: 1%;
         padding-left: 15px;
-        width: 60%; }
+        width: 60%;
+        font-family: Georgia, 'Times New Roman', Times, serif; }
         body main #table-box .tour-place .tour-content h1 {
           text-align: center;
           font-size: 2rem; }
+        body main #table-box .tour-place .tour-content p {
+          line-height: 1.5; }
         body main #table-box .tour-place .tour-content .tour-desc {
           padding: 5%; }
