@@ -1,0 +1,16 @@
+﻿@import './Shared/_variables';
+
+body {
+    #container{
+            padding-top: 30px;
+            #table-box {
+                background-color: white;
+                margin: auto;
+                width: 80%;
+                border-radius: 10px;
+                box-shadow: rgba(0,0,0,0.2) 3px 2px 1px 0px;
+                padding: 5px;
+                text-align: left;
+            }
+    }
+}

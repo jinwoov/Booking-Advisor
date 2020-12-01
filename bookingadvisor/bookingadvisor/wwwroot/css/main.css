@@ -48,83 +48,88 @@ body main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
-  body main #save-money {
-    font-weight: bold;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 20px; }
-  body main #upper-box {
-    width: 90%;
-    margin: auto;
-    padding-top: 40px;
-    text-align: center;
-    font-family: "Roboto", sans-serif; }
-  body main .form-box p {
-    width: 100%;
-    padding: 5px; }
-  body main .form-box #user-choice {
-    padding: 5px; }
-    body main .form-box #user-choice input {
-      width: 70%;
-      height: 2.8rem;
-      padding: 5px;
-      border: 2px solid #1c1a2f; }
-    body main .form-box #user-choice input:focus {
-      outline: none !important;
-      border: 3px solid #febb02;
-      box-shadow: 0 0 10px #719ECE;
-      border-radius: 0; }
-    body main .form-box #user-choice button {
-      border: none;
-      font-size: 1.2rem;
-      font-weight: bolder;
-      background-color: #1c1a2f;
-      color: white;
-      padding: 11px;
-      border-radius: 0; }
-  body main #table-box {
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    margin-top: 30px;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.2) 3px 2px 1px 0px;
+
+body main #save-money {
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 20px; }
+
+body main #upper-box {
+  width: 90%;
+  margin: auto;
+  padding-top: 40px;
+  text-align: center;
+  font-family: "Roboto", sans-serif; }
+
+body main .form-box p {
+  width: 100%;
+  padding: 5px; }
+
+body main .form-box #user-choice {
+  padding: 5px; }
+  body main .form-box #user-choice input {
+    width: 70%;
+    height: 2.8rem;
     padding: 5px;
-    text-align: left; }
-    body main #table-box .hotel {
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap; }
-      body main #table-box .hotel img {
-        width: 22%; }
-      body main #table-box .hotel .tour-content {
-        padding: 1%;
-        padding-left: 15px;
-        width: 60%;
-        font-family: Georgia, 'Times New Roman', Times, serif; }
-        body main #table-box .hotel .tour-content h1 {
-          text-align: center;
-          font-size: 2rem; }
-        body main #table-box .hotel .tour-content p {
-          line-height: 1.5; }
-        body main #table-box .hotel .tour-content .tour-desc {
-          padding: 5%; }
-    body main #table-box .tour-place {
-      padding: 10px;
-      display: flex;
-      flex-wrap: wrap; }
-      body main #table-box .tour-place img {
-        width: 40%; }
-      body main #table-box .tour-place .tour-content {
-        padding: 1%;
-        padding-left: 15px;
-        width: 60%;
-        font-family: Georgia, 'Times New Roman', Times, serif; }
-        body main #table-box .tour-place .tour-content h1 {
-          text-align: center;
-          font-size: 2rem; }
-        body main #table-box .tour-place .tour-content p {
-          line-height: 1.5; }
-        body main #table-box .tour-place .tour-content .tour-desc {
-          padding: 5%; }
+    border: 2px solid #1c1a2f; }
+  body main .form-box #user-choice input:focus {
+    outline: none !important;
+    border: 3px solid #febb02;
+    box-shadow: 0 0 10px #719ECE;
+    border-radius: 0; }
+  body main .form-box #user-choice button {
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    background-color: #1c1a2f;
+    color: white;
+    padding: 11px;
+    border-radius: 0; }
+
+body main #table-box {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 30px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 3px 2px 1px 0px;
+  padding: 5px;
+  text-align: left; }
+  body main #table-box .hotel {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; }
+    body main #table-box .hotel img {
+      width: 22%; }
+    body main #table-box .hotel .tour-content {
+      padding: 1%;
+      padding-left: 15px;
+      width: 60%;
+      font-family: Georgia, 'Times New Roman', Times, serif; }
+      body main #table-box .hotel .tour-content h1 {
+        text-align: center;
+        font-size: 2rem; }
+      body main #table-box .hotel .tour-content p {
+        line-height: 1.5; }
+      body main #table-box .hotel .tour-content .tour-desc {
+        padding: 5%; }
+  body main #table-box .tour-place {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; }
+    body main #table-box .tour-place img {
+      width: 40%; }
+    body main #table-box .tour-place .tour-content {
+      padding: 1%;
+      padding-left: 15px;
+      width: 60%;
+      font-family: Georgia, 'Times New Roman', Times, serif; }
+      body main #table-box .tour-place .tour-content h1 {
+        text-align: center;
+        font-size: 2rem; }
+      body main #table-box .tour-place .tour-content p {
+        line-height: 1.5; }
+      body main #table-box .tour-place .tour-content .tour-desc {
+        padding: 5%; }

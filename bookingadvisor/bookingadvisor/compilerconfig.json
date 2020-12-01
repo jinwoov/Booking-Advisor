@@ -2,5 +2,13 @@
   {
     "outputFile": "wwwroot/css/main.css",
     "inputFile": "wwwroot/css/scss/main.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/Innkeeper.css",
+    "inputFile": "wwwroot/css/scss/Innkeeper.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/_variables.css",
+    "inputFile": "wwwroot/css/scss/Shared/_variables.scss"
   }
 ]

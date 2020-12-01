@@ -19,11 +19,11 @@ function givemehint() {
     return "All of the challenges within this website should be able to perform within the inspect tool.";
 }
 
-$("#find-deal").click(findTheDeal);
 
 function findTheDeal() {
     let input_result = $(this).parent().children("input").val();
     $("#output-deal").html(`The result of ${input_result}`);
+    return input_result;
 }
 
 function createDictionary() {
@@ -47,6 +47,9 @@ const appendInfo = () => {
 }
 
 const searchFunc = () => {
+    let output = findTheDeal();
+    if (output.includes("<script>") || output.includes("<"))
+        return;
     let searchLocation = $("#search-box").val();
     let firstL = searchLocation[0].toUpperCase();
     let restW = searchLocation.substr(1);
@@ -63,7 +66,6 @@ const searchFunc = () => {
     }
 }
 
-$("#find-deal").click(searchFunc);
 
 $("#search-box").keypress(function (event) {
     var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -73,6 +75,7 @@ $("#search-box").keypress(function (event) {
 })
 
 // Main
+$("#find-deal").click(findTheDeal);
 let dictionary = createDictionary();
 $("document").ready(appendInfo);
 
