@@ -1,0 +1,47 @@
+﻿@import './Shared/_variables';
+@import './Shared/_layout.css';
+
+body {
+    #container {
+        padding-top: 10% !important;
+    }
+
+    #disclosure {
+        text-align: left;
+        font-family: $main-font;
+        font-weight: 600;
+        padding: 2%;
+    }
+
+    input {
+        width: 60%;
+        height: 2.5rem;
+        padding: 5px;
+        border: 1px inset grey;
+        margin: 3% 0;
+        font-size: 1.1rem;
+        border-radius: 2px;
+
+        &:focus {
+            outline: none !important;
+            border: 2px solid $jbanner;
+            box-shadow: 0 0 10px #719ECE;
+        }
+    }
+
+    #loginP-button {
+        border: none;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        background-color: $jbanner;
+        color: white;
+        padding: 2% 8%;
+        border-radius: 0;
+        margin-bottom: 3%;
+        opacity: 1;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

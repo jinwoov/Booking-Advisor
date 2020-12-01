@@ -1,53 +1,7 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
+@import url(scss/Shared/_layout.css);
 *, *:before, *:after {
   box-sizing: border-box; }
-
-body header .head {
-  background-color: #1c1a2f;
-  color: white;
-  padding: 20px;
-  font-family: 'Lobster', cursive; }
-  body header .head h2 {
-    margin-top: 5px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    text-align: right; }
-  body header .head #authentication {
-    text-align: right; }
-    body header .head #authentication button {
-      background-color: white;
-      padding: 5px 10px;
-      margin: 0 5px;
-      border-radius: 10%;
-      font-weight: 600; }
-    body header .head #authentication button:hover {
-      color: grey; }
-  body header .head #menu-bar {
-    text-align: center;
-    margin: auto;
-    width: 40%; }
-    body header .head #menu-bar h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
-    body header .head #menu-bar div {
-      padding-top: 40px;
-      display: flex;
-      justify-content: space-evenly; }
-      body header .head #menu-bar div a {
-        font-family: "Roboto", sans-serif;
-        color: white;
-        text-decoration: none;
-        opacity: 0.6; }
-      body header .head #menu-bar div a:hover {
-        opacity: 1; }
-
-body main {
-  background-image: url("../assets/background.jpg");
-  height: 90vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
 
 body main #save-money {
   font-weight: bold;
@@ -84,7 +38,10 @@ body main .form-box #user-choice {
     background-color: #1c1a2f;
     color: white;
     padding: 11px;
-    border-radius: 0; }
+    border-radius: 0;
+    opacity: 1; }
+    body main .form-box #user-choice button:hover {
+      opacity: 0.8; }
 
 body main #table-box {
   background-color: white;
@@ -107,7 +64,7 @@ body main #table-box {
       padding: 1%;
       padding-left: 15px;
       width: 60%;
-      font-family: Georgia, 'Times New Roman', Times, serif; }
+      font-family: Georgia, "Times New Roman", Times, serif; }
       body main #table-box .hotel .tour-content h1 {
         text-align: center;
         font-size: 2rem; }
@@ -125,7 +82,7 @@ body main #table-box {
       padding: 1%;
       padding-left: 15px;
       width: 60%;
-      font-family: Georgia, 'Times New Roman', Times, serif; }
+      font-family: Georgia, "Times New Roman", Times, serif; }
       body main #table-box .tour-place .tour-content h1 {
         text-align: center;
         font-size: 2rem; }

@@ -1,0 +1,27 @@
+﻿@page
+@model bookingadvisor.Pages.Account.LoginModel
+@{
+    Layout = "_Layout";
+}
+
+
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="~/css/auth.css" />
+</head>
+<body>
+    <main>
+        <div id="container">
+            <div id="table-box">
+                <p id="disclosure">Sign in with your email</p>
+                <form action="/" method="post">
+                    <input type="text" placeholder="Username" />
+                    <input type="password" placeholder="Password" />
+                    <div>
+                        <button id="loginP-button">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>

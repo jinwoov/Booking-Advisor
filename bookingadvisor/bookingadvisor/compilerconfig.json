@@ -10,5 +10,13 @@
   {
     "outputFile": "wwwroot/css/_variables.css",
     "inputFile": "wwwroot/css/scss/Shared/_variables.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/auth.css",
+    "inputFile": "wwwroot/css/scss/auth.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/scss/Shared/_layout.css",
+    "inputFile": "wwwroot/css/scss/Shared/_layout.scss"
   }
 ]

@@ -2,6 +2,7 @@
 $phone-size: 900px;
 $roboto: 'Roboto', sans-serif;
 $main-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$main-serif: Georgia, 'Times New Roman', Times, serif;
 $jorange: #febb02;
 $jpurple: #4639cc;
 $jblue: #003580;
@@ -9,75 +10,4 @@ $jbanner: #1c1a2f;
 
 *, *:before, *:after {
     box-sizing: border-box;
-}
-
-body {
-    header {
-        .head {
-            background-color: $jbanner;
-            color: white;
-            padding: 20px;
-            font-family: 'Lobster', cursive;
-
-            h2 {
-                margin-top: 5px;
-                font-family: $main-font;
-                text-align: right;
-            }
-
-            #authentication {
-                text-align: right;
-
-                button {
-                    background-color: white;
-                    padding: 5px 10px;
-                    margin: 0 5px;
-                    border-radius: 10%;
-                    font-weight: 600;
-                }
-
-                button:hover {
-                    color: grey;
-                }
-            }
-
-            #menu-bar {
-                text-align: center;
-                margin: auto;
-                width: 40%;
-
-                h1 {
-                    font-size: 2.5rem;
-                    font-weight: bold;
-                    font-family: $main-font;
-                }
-
-                div {
-                    padding-top: 40px;
-                    display: flex;
-                    justify-content: space-evenly;
-
-                    a {
-                        font-family: $roboto;
-                        color: white;
-                        text-decoration: none;
-                        opacity: 0.6;
-                    }
-
-                    a:hover {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
-
-    main {
-        background-image: url("../../assets/background.jpg");
-        height: 90vh;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 }

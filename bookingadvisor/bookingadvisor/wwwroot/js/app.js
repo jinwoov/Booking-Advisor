@@ -1,6 +1,5 @@
 ﻿'use strict';
 
-const hotelList = ["Place", "House", "Hotel", "Inn", "Hostel"];
 
 console.log(`%c
          __    To Mochi the best dog!
@@ -14,6 +13,9 @@ _   /  ''   |
   \\   /_ || \\\\_
    \\____)|_) \\_)`, "color:#febb02; background:black; font-family: monospace");
 console.log("%cWelcome to the Booking Advisor web application. Goal is to exploit as much as you can!!", "color:#febb02; background:black; font-family: monospace");
+const hotelList = ["Place", "House", "Hotel", "Inn", "Hostel"];
+
+
 
 function givemehint() {
     return "All of the challenges within this website should be able to perform within the inspect tool.";
@@ -67,6 +69,9 @@ const searchFunc = () => {
     }
 }
 
+function redirectToLogin() {
+    window.location = "/Account/login";
+}
 
 $("#search-box").keypress(function (event) {
     var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -79,4 +84,4 @@ $("#search-box").keypress(function (event) {
 $("#find-deal").click(searchFunc);
 let dictionary = createDictionary();
 $("document").ready(appendInfo);
-
+$("#login-button").click(redirectToLogin);
