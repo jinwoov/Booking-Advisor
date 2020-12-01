@@ -76,13 +76,13 @@ const redirectToLogin = () => {
 
 const mainVisible = async () => {
     $("main").hide();
-    await sleep(2000);
+    await sleep(1000);
     $("main").show();
 }
 
 const spinner = async () => {
     $(".outer-spinner").show();
-    await sleep(2000);
+    await sleep(1000);
     $(".outer-spinner").hide();
 }
 
