@@ -69,7 +69,7 @@ const searchFunc = () => {
     }
 }
 
-function redirectToLogin() {
+const redirectToLogin = () => {
     window.location = "/Account/login";
 }
 
@@ -85,3 +85,6 @@ $("#find-deal").click(searchFunc);
 let dictionary = createDictionary();
 $("document").ready(appendInfo);
 $("#login-button").click(redirectToLogin);
+$("#register-button").click((e) => {
+    window.location = "/Account/Register";
+});

@@ -18,7 +18,8 @@ body header .head {
       padding: 5px 10px;
       margin: 0 5px;
       border-radius: 10%;
-      font-weight: 600; }
+      font-weight: 600;
+      font-family: "Roboto", sans-serif; }
     body header .head #authentication button:hover {
       color: grey; }
   body header .head #menu-bar {
