@@ -2,7 +2,8 @@
 
 ![Application License](https://img.shields.io/github/license/jinwoov/Booking-Advisor)
 ![Last Committed](https://img.shields.io/github/last-commit/jinwoov/Booking-Advisor)
-![Most Used Language](https://img.shields.io/github/languages/jinwoov/Booking-Advisor)
+![Most Used Language](https://img.shields.io/github/languages/top/jinwoov/booking-advisor)
+![CI Pipeline](https://img.shields.io/github/workflow/status/jinwoov/booking-advisor/CI/dev)
 
 ---
 ## Deployed Site
