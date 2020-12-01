@@ -21,7 +21,7 @@ function givemehint() {
 
 
 function findTheDeal() {
-    let input_result = $(this).parent().children("input").val();
+    let input_result = $("#search-box").val();
     $("#output-deal").html(`The result of ${input_result}`);
     return input_result;
 }
@@ -48,8 +48,9 @@ const appendInfo = () => {
 
 const searchFunc = () => {
     let output = findTheDeal();
-    if (output.includes("<script>") || output.includes("<"))
+    if (output.includes("<script>") || output.includes("<")) {
         return;
+    }
     let searchLocation = $("#search-box").val();
     let firstL = searchLocation[0].toUpperCase();
     let restW = searchLocation.substr(1);
@@ -75,7 +76,7 @@ $("#search-box").keypress(function (event) {
 })
 
 // Main
-$("#find-deal").click(findTheDeal);
+$("#find-deal").click(searchFunc);
 let dictionary = createDictionary();
 $("document").ready(appendInfo);
 
