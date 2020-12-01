@@ -53,24 +53,41 @@ const searchFunc = () => {
     if (output.includes("<script>") || output.includes("<")) {
         return;
     }
+    spinner();
     let searchLocation = $("#search-box").val();
     let firstL = searchLocation[0].toUpperCase();
     let restW = searchLocation.substr(1);
     searchLocation = firstL + restW;
 
     $("main").css("height", "100%");
-
+    mainVisible();
     $("#table-box").empty();
     for (let i = 0; i < hotelList.length; i++) {
         $("#table-box").append(`<div class='hotel' id='hotel${i}'></div>`);
         $(`#hotel${i}`).append("<img src='/assets/hotel.png' />");
         $(`#hotel${i}`).append(`<div class='tour-content' id='tour-content${i}'></div>`);
-        $(`#tour-content${i}`).append(`<h1 class='tour-title'>${searchLocation} ${hotelList[i]}</h1>`)
+        $(`#tour-content${i}`).append(`<h1 class='tour-title'>${searchLocation} ${hotelList[i]}</h1>`);
     }
 }
 
 const redirectToLogin = () => {
     window.location = "/Account/login";
+}
+
+const mainVisible = async () => {
+    $("main").hide();
+    await sleep(2000);
+    $("main").show();
+}
+
+const spinner = async () => {
+    $(".outer-spinner").show();
+    await sleep(2000);
+    $(".outer-spinner").hide();
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 $("#search-box").keypress(function (event) {
@@ -80,6 +97,8 @@ $("#search-box").keypress(function (event) {
     }
 })
 
+
+
 // Main
 $("#find-deal").click(searchFunc);
 let dictionary = createDictionary();
@@ -88,3 +107,5 @@ $("#login-button").click(redirectToLogin);
 $("#register-button").click((e) => {
     window.location = "/Account/Register";
 });
+
+$(".outer-spinner").hide();

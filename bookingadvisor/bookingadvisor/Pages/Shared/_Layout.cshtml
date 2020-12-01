@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>Booking-Advisor</title>
     <link rel="stylesheet" href="~/css/reset.css" />
+    <link rel="stylesheet" href="~/css/spinner.css" />
+
 </head>
 <body>
     <header>
@@ -25,8 +27,12 @@
         </div>
     </header>
     <div>
+        <div class="outer-spinner">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        </div>
         @RenderBody()
     </div>
+    
     <script src="~/js/jQuery.js"></script>
     <script src="~/js/app.js"></script>
 
