@@ -2,7 +2,7 @@
 
 ![Application License](https://img.shields.io/github/license/jinwoov/Booking-Advisor)
 ![Last Committed](https://img.shields.io/github/last-commit/jinwoov/Booking-Advisor)
-![Most Used Language](https://img.shields.io/github/languages/top/jinwoov/Booking-Advisor)
+![Most Used Language](https://img.shields.io/github/languages/jinwoov/Booking-Advisor)
 
 ---
 ## Deployed Site
@@ -17,7 +17,7 @@
 ---
 ## Application Information
 
-A website created to display modern web application vulnerabilities.
+A traveling website that service to customer with hotel information of the desired location. However, they lack security measures that prevents adversaries from exploiting the vulnerabilities within the website. The goal of the end user is to find these vulnerabilities so that `Booking Advisor` will better prepare their website from foreseeable attack in the future.
 
 ---
 ## Tools Used
