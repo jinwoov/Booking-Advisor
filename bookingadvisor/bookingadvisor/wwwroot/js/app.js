@@ -70,10 +70,6 @@ const searchFunc = () => {
     }
 }
 
-const redirectToLogin = () => {
-    window.location = "/Account/login";
-}
-
 const mainVisible = async () => {
     $("main").hide();
     await sleep(1000);
@@ -103,9 +99,4 @@ $("#search-box").keypress(function (event) {
 $("#find-deal").click(searchFunc);
 let dictionary = createDictionary();
 $("document").ready(appendInfo);
-$("#login-button").click(redirectToLogin);
-$("#register-button").click((e) => {
-    window.location = "/Account/Register";
-});
 
-$(".outer-spinner").hide();

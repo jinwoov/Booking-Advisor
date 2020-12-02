@@ -3,4 +3,3 @@
 });
 
 
-$(".outer-spinner").hide();
