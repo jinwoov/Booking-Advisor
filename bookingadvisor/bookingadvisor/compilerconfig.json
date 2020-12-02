@@ -18,5 +18,9 @@
   {
     "outputFile": "wwwroot/css/scss/Shared/_layout.css",
     "inputFile": "wwwroot/css/scss/Shared/_layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/Vulnerability.css",
+    "inputFile": "wwwroot/css/scss/Vulnerability.scss"
   }
 ]
