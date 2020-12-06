@@ -47,4 +47,4 @@ A traveling website that service to customer with hotel information of the desir
 
 ## References
 [JS timer](https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep)  
-[Spinner](https://loading.io/css/)
+[Spinner](https://tobiasahlin.com/spinkit/)
