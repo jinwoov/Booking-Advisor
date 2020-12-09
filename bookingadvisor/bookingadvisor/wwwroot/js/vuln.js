@@ -3,7 +3,7 @@
 }
 
 
-$(".vulnerable-box").click(function() {
+$(".vulnerable-box").click(function () {
     let headerText = $(this).text();
     $("main").css("height", "150vh");
     $("#cover-box").show();
@@ -19,6 +19,14 @@ $("#exit-box").click(function () {
 });
 
 $("#cover-box").hide();
+
+$.ajax({
+    type: "GET",
+    url: "~/main.py",
+    data: {param: "inject"}
+}).done(function(o) {
+    console.log(o);
+});
 
 
 
