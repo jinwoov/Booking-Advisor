@@ -20,13 +20,5 @@ $("#exit-box").click(function () {
 
 $("#cover-box").hide();
 
-$.ajax({
-    type: "GET",
-    url: "~/main.py",
-    data: {param: "inject"}
-}).done(function(o) {
-    console.log(o);
-});
-
 
 
